@@ -55,6 +55,10 @@
         <div class="container has-text-centered">
             <form action="#" th:action="@{/pessoa/alterar}" th:object="${pessoa}" method="post" class="custom-form">
                 <div>
+                    <label for="id">Código</label>
+                    <input type="text" id="id" placeholder="Seu Id" th:field="*{id}" readonly>
+                </div>
+                <div>
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" placeholder="Seu Nome" th:field="*{nome}" required>
                 </div>
