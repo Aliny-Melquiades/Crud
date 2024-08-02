@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Listar Pessoas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+
+    <style>
+        /* Estilo personalizado para a tabela e links */
+        .custom-form {
+            background-color: #E6E6FA; /* Roxo claro */
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #D8BFD8; /* Bordas roxo médio */
+            color: black; /* Texto preto */
+        }
+
+        .custom-form input,
+        .custom-form button,
+        .custom-form a {
+            border: 2px solid #D8BFD8; /* Bordas roxo médio */
+            color: black;
+            background-color: #D3CCE3; /* Roxo muito claro */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .custom-form input:hover,
+        .custom-form button:hover,
+        .custom-form a:hover {
+            background-color: #D8BFD8; /* Roxo médio */
+            color: white;
+        }
+
+        .custom-form table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            color: black; /* Texto preto */
+        }
+
+        .custom-form table, .custom-form th, .custom-form td {
+            border: 1px solid #D8BFD8; /* Bordas roxo médio */
+            padding: 10px;
+            text-align: left;
+        }
+
+        .custom-form th {
+            background-color: #D8BFD8; /* Roxo médio */
+            color: black; /* Texto preto */
+        }
+
+        .custom-form td {
+            background-color: #E6E6FA; /* Roxo claro */
+        }
+
+        .custom-form a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #D8BFD8; /* Roxo médio */
+            color: black;
+            text-decoration: none;
+        }
+
+        .custom-form a:hover {
+            background-color: #B19CD9; /* Roxo escuro */
+            color: white;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #4B0082; /* Roxo escuro */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-$END$
+<section class="hero is-fullheight is-flex is-align-items-center is-dark">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="custom-form">
+                <table>
+                    <h1>Lista De Usuários</h1>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                    <tr th:each="p : ${pessoas}">
+                        <td th:text="${p.nome}"></td>
+                        <td th:text="${p.email}"></td>
+                        <td th:text="${p.fone}"></td>
+                        <td>
+                            <a th:href="@{/pessoa/alterar/{id}(id=${p.id})}">Editar</a>
+                            <a th:href="@{/pessoa/excluir/{id}(id=${p.id})}">Excluir</a>
+                        </td>
+                    </tr>
+                </table>
+                <a href="/pessoa/cadastrar">Novo Cadastro</a>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
