@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Controle de Usuários</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+
+    <style>
+        /* Estilo personalizado para a página */
+        .hero.is-dark {
+            background-color: #E6E6FA; /* Roxo claro */
+        }
+
+        .title {
+            color: #4B0082; /* Roxo escuro */
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .buttons .button {
+            border: 2px solid #D8BFD8; /* Bordas roxo médio */
+            color: black;
+            background-color: #D3CCE3; /* Roxo muito claro */
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .buttons .button:hover {
+            background-color: #D8BFD8; /* Roxo médio */
+            color: white;
+        }
+
+        .buttons .button.is-primary {
+            background-color: #D8BFD8; /* Roxo médio */
+            color: black;
+        }
+
+        .buttons .button.is-link {
+            background-color: #D3CCE3; /* Roxo muito claro */
+            color: black;
+        }
+
+        .buttons .button.is-link:hover {
+            background-color: #B19CD9; /* Roxo escuro */
+            color: white;
+        }
+    </style>
 </head>
 <body>
-$END$
+<section class="hero is-fullheight is-flex is-align-items-center is-dark">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Controle de Usuários</h1>
+            <div class="buttons is-centered">
+                <a href="/pessoa/cadastrar" class="button is-primary">Novo Cadastro</a>
+                <a href="/pessoa/listar" class="button is-link">Listar Usuários</a>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
