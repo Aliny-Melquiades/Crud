@@ -2,51 +2,50 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Alterar Pessoa</title>
+    <title>Alterar Cliente</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+<style>
+    /* Estilo personalizado para o formulário */
+    .custom-form {
+    background-color: white; /* Rosa escuro */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #FF69B4; /* Bordas rosa pink */
+    color: white; /* Texto branco */
+    max-width: 400px;
+    margin: 0 auto;
+    }
 
-    <style>
-        /* Estilo personalizado para o formulário */
-        .custom-form {
-            background-color: #D8BFD8; /* Roxo claro */
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid #B19CD9; /* Bordas roxo médio */
-            color: black; /* Texto preto */
-            max-width: 400px;
-            margin: 0 auto;
-        }
+    .custom-form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: deeppink; /* Rosa claro para labels */
+    }
 
-        .custom-form label {
-            display: block;
-            text-align: left;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #4B0082; /* Roxo escuro para labels */
-        }
+    .custom-form input[type="text"],
+    .custom-form input[type="email"],
+    .custom-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid #FF69B4; /* Bordas rosa pink */
+    background-color: #FFC0CB; /* Rosa muito claro */
+    color: black;
+    }
 
-        .custom-form input[type="text"],
-        .custom-form input[type="email"],
-        .custom-form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 2px solid #B19CD9; /* Bordas roxo médio */
-            background-color: #E6E6FA; /* Roxo muito claro */
-            color: black;
-        }
+    .custom-form input[type="submit"] {
+    background-color: #FF1493; /* Rosa escuro vibrante */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    }
 
-        .custom-form input[type="submit"] {
-            background-color: #B19CD9; /* Roxo médio */
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .custom-form input[type="submit"]:hover {
-            background-color: #9B5D9B; /* Roxo escuro */
-        }
+    .custom-form input[type="submit"]:hover {
+    background-color: #C71585; /* Rosa escuro mais claro */
+    }
     </style>
 </head>
 <body>
