@@ -2,25 +2,25 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Listar Pessoas</title>
+    <title>Listar Clientes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
 
     <style>
         /* Estilo personalizado para a tabela e links */
         .custom-form {
-            background-color: #E6E6FA; /* Roxo claro */
+            background-color: #FF69B4; /* Rosa escuro */
             padding: 20px;
             border-radius: 10px;
-            border: 2px solid #D8BFD8; /* Bordas roxo médio */
-            color: black; /* Texto preto */
+            border: 2px solid #C71585; /* Bordas rosa mais escuro */
+            color: white; /* Texto branco */
         }
 
         .custom-form input,
         .custom-form button,
         .custom-form a {
-            border: 2px solid #D8BFD8; /* Bordas roxo médio */
-            color: black;
-            background-color: #D3CCE3; /* Roxo muito claro */
+            border: 2px solid #C71585; /* Bordas rosa mais escuro */
+            color: white;
+            background-color: #FFB6C1; /* Rosa claro */
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 5px;
@@ -31,7 +31,7 @@
         .custom-form input:hover,
         .custom-form button:hover,
         .custom-form a:hover {
-            background-color: #D8BFD8; /* Roxo médio */
+            background-color: #C71585; /* Rosa mais escuro */
             color: white;
         }
 
@@ -39,41 +39,41 @@
             margin-top: 20px;
             width: 100%;
             border-collapse: collapse;
-            color: black; /* Texto preto */
+            color: black; /* Texto branco */
         }
 
         .custom-form table, .custom-form th, .custom-form td {
-            border: 1px solid #D8BFD8; /* Bordas roxo médio */
+            border: 1px solid #C71585; /* Bordas rosa mais escuro */
             padding: 10px;
             text-align: left;
         }
 
         .custom-form th {
-            background-color: #D8BFD8; /* Roxo médio */
-            color: black; /* Texto preto */
+            background-color: #C71585; /* Rosa mais escuro */
+            color: white; /* Texto branco */
         }
 
         .custom-form td {
-            background-color: #E6E6FA; /* Roxo claro */
+            background-color: #FF69B4; /* Rosa escuro */
         }
 
         .custom-form a {
             display: inline-block;
             padding: 10px 20px;
             border-radius: 5px;
-            background-color: #D8BFD8; /* Roxo médio */
-            color: black;
+            background-color: #C71585; /* Rosa mais escuro */
+            color: white;
             text-decoration: none;
         }
 
         .custom-form a:hover {
-            background-color: #B19CD9; /* Roxo escuro */
+            background-color: mediumseagreen; /* Roxo escuro */
             color: white;
         }
 
         h1 {
             font-size: 48px;
-            color: #4B0082; /* Roxo escuro */
+            color: white; /* Roxo escuro */
             font-weight: bold;
         }
     </style>
@@ -83,8 +83,8 @@
     <div class="hero-body">
         <div class="container has-text-centered">
             <div class="custom-form">
+                <h1>LISTA DE CLIENTES</h1>
                 <table>
-                    <h1>Lista De Usuários</h1>
                     <tr>
                         <th>Código</th>
                         <th>Nome</th>
