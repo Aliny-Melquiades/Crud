@@ -46,6 +46,20 @@
             background-color: #FF69B4; /* Rosa escuro */
             color: white;
         }
+
+        /* Centralizar a imagem */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -55,8 +69,14 @@
             <h1 class="title">Controle de Clientes</h1>
             <div class="buttons is-centered">
                 <a href="/pessoa/cadastrar" class="button is-primary">Novo Cadastro</a>
-                <a href="/pessoa/listar" class="button is-link">Listar Usuários</a>
+                <a href="/pessoa/listar" class="button is-link">Listar Clientes</a>
             </div>
+
+            <!-- Contêiner para centralizar a imagem -->
+            <div class="image-container">
+                <img src="https://img-aws.ehowcdn.com/750x400p/photos.demandstudios.com/getty/article/202/48/E000124.jpg" alt="Planilha de Controle">
+            </div>
+
         </div>
     </div>
 </section>
